@@ -1,0 +1,111 @@
+set relativenumber
+set scrolloff = 6
+set showmode
+set showcmd
+set visualbell
+set clipboard+=unnamed
+set ideajoin
+
+set ignorecase
+set incsearch
+set nohlsearch
+set smartcase
+
+set surround
+set easymotion
+set notimeout
+set sneak
+set commentary
+set highlightedyank
+set nerdtree
+
+let mapleader = " "
+
+map <leader><leader> <Plug>(easymotion-s)
+
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '>-2<CR>gv=gv
+
+" Save file
+nnoremap <leader>fs :w<CR>
+nnoremap <C-x><C-s> :w<CR>
+
+map <leader>ff <action>(GotoFile)
+map <leader>. <Action>(GotoFile)
+map <leader>fr <Action>(RecentFiles)
+
+map <leader>sp <Action>(FindInPath)
+
+
+map <C-o> :action Back<CR>
+map <C-i> :action Forward<CR>
+
+" to comment line
+map <leader>c <Action>(CommentByLineComment)
+" nnoremap gc <Action>(CommentByLineComment)
+
+nmap gd <Action>(GotoDeclaration)
+nmap gi <Action>(GotoImplementation)
+nmap gu <Action>(ShowUsages)
+nmap <leader>rn <Action>(RenameElement)
+
+"" Remap copy and paste to use clipboard
+" vnoremap y "+y
+" vnoremap p "+p
+
+" Open NERDTree (use q to exit)
+map <leader>e :NERDTreeToggle<CR>
+
+" Mirror my telescope.nvim keymap for diagnostics
+map <leader>dn <Action>(GotoNextError)
+map <leader>dp <Action>(GotoPreviousError)
+
+" Window Navigation
+nnoremap <leader>wn <c-w>h
+nnoremap <leader>wi <c-w>l
+nnoremap <leader>we <c-w>j
+nnoremap <leader>wu <c-w>k
+map <leader>wx <action>(CloseContent)
+
+" Tab Navigation
+nnoremap <leader>th <Action>PreviousTab
+nnoremap <leader>to <Action>NextTab
+
+" Folding
+" nmap zc <action>CollapseRegion<CR>
+" nmap zo <action>ExpandRegion<CR>
+nnoremap zc :action CollapseRegion<CR>
+nnoremap zo :action ExpandRegion<CR>
+
+" Toggle Views
+map <leader>tz <action>(ToggleZenMode)
+map <leader>td <action>(ToggleDistractionFreeMode)
+
+" Which-Key Setup
+set which-key
+" let g:WhichKey_FontSize = 16
+" let g:Whichekey_CommandColor = ""
+" let g:Whichekey_PrefixColor = ""
+let g:WhichKey_SortOrder = "by_key_prefix_first"
+
+let g:WhichKeyDesc_leader = "<leader> Leader key"
+
+let g:WhichKeyDesc_leader = "<leader>e Open file explorer"
+
+let g:WhichKeyDesc_file_nav = "<leader>f File navigation"
+let g:WhichKeyDesc_file_nav_goto_file = "<leader>ff Go to file"
+let g:WhichKeyDesc_file_nav_show_recent_files = "<leader>fr Show recent files"
+let g:WhichKeyDesc_file_nav_save_file = "<leader>fs Save file"
+
+let g:WhichKeyDesc_goto = "g Go to..."
+let g:WhichKeyDesc_goto_declaration = "gd Go to Definition"
+let g:WhichKeyDesc_goto_implementation = "gi Go to Implementation"
+let g:WhichKeyDesc_goto_usages = "gu Go to Usages"
+
+let g:WhichKeyDisc_search = "<leader>s Search..."
+let g:WhichKeyDisc_search_project = "<leader>sp Search in files"

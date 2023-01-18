@@ -1,0 +1,31 @@
+{
+  "float": [
+    {
+      "class": "pop-shell-example",
+      "title": "pop-shell-example"
+    },
+    {
+      "class": "Gnome-control-center"
+    },
+    {
+      "class": "Gnome-tweaks"
+    },
+    {
+      "class": "Steam"
+    },
+    {
+      "class": "Gnome-pomodoro"
+    },
+    {
+      "class": "Spotify"
+    },
+    {
+      "class": "Floating Window Exceptions"
+    },
+    {
+      "class": "Surfshark"
+    }
+  ],
+  "skiptaskbarhidden": [],
+  "log_on_focus": false
+}
