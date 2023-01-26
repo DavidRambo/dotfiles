@@ -11,6 +11,10 @@ export PATH=~/.config/emacs/bin:$PATH
 export PATH=~/.config/local/share/cargo/bin:$PATH
 
 export GIO_MODULE_DIR=/usr/lib/x86_64-linux-gnu/gio/modules/
+export PYENV_ROOT="$HOME/.pyenv/"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # For CS61B remote debugging
 export REPO_DIR=/home/david/repos/cs61b
@@ -43,6 +47,8 @@ bindkey -M menuselect 'n' vi-backward-char
 bindkey -M menuselect 'u' vi-up-line-or-history
 bindkey -M menuselect 'i' vi-forward-char
 bindkey -M menuselect 'e' vi-down-line-or-history
+
+fpath+=~/.zfunc
 
 autoload -Uz compinit
 compinit
