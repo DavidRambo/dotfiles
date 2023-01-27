@@ -48,7 +48,7 @@ bindkey -M menuselect 'u' vi-up-line-or-history
 bindkey -M menuselect 'i' vi-forward-char
 bindkey -M menuselect 'e' vi-down-line-or-history
 
-fpath+=~/.zfunc
+fpath+=$ZDOTDIR/.zfunc/
 
 autoload -Uz compinit
 compinit
