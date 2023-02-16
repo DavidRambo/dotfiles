@@ -35,6 +35,7 @@ alias bat="batcat"
 alias cat="batcat"
 alias ls="lsd"
 alias python="python3"
+alias pym="python -m"
 alias x="xplr"
 alias nv="nvim"
 
@@ -46,7 +47,7 @@ alias fpkg="dpkg --get-selections | grep "
 alias wget="wget -c"
 
 # apt-get aliases
-alias update='sudo apt-get update'
+alias update='sudo apt-get update && aptl'
 alias upgrade='sudo apt-get upgrade'
 alias aptu='sudo apt-get update && sudo apt-get upgrade -y'
 alias apts="apt-cache search"

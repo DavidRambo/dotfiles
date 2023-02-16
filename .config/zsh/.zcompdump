@@ -1,4 +1,4 @@
-#files: 968	version: 5.8.1
+#files: 967	version: 5.8.1
 
 _comps=(
 '-' '_precommand'
@@ -1082,7 +1082,6 @@ _comps=(
 'podgrep' '_perl_modules'
 'podpath' '_perl_modules'
 'podtoc' '_perl_modules'
-'poetry' '_poetry'
 'poff' '_pon'
 'policytool' '_java'
 'pon' '_pon'
@@ -2038,7 +2037,7 @@ autoload -Uz _apt-manage _bootctl _busctl _bwrap _codium \
             _zed _zftp _zle _zmodload _zmv \
             _zparseopts _zpty _zsh-mime-handler _zsocket _zstyle \
             _ztodo _hwinfo _osc _SUSEconfig _yast \
-            _zypper _poetry
+            _zypper
 autoload -Uz +X _call_program
 
 typeset -gUa _comp_assocs

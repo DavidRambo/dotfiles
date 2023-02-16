@@ -48,14 +48,23 @@ bindkey -M menuselect 'u' vi-up-line-or-history
 bindkey -M menuselect 'i' vi-forward-char
 bindkey -M menuselect 'e' vi-down-line-or-history
 
-fpath+=$ZDOTDIR/.zfunc/
-
 autoload -Uz compinit
 compinit
+
+# poetry completions are here:
+fpath+=$ZDOTDIR/.zfunc/
+
+# Hatch (Python project manager) completions
+. $ZDOTDIR/.hatch-complete.zsh
 
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 
 _comp_options+=(globdots)  # completion with hidden files
+
+# pipx completions
+autoload -U bashcompinit
+bashcompinit
+eval "$(register-python-argcomplete pipx)"
 
 # Fuzzy search with fzf
 source /usr/share/doc/fzf/examples/completion.zsh
