@@ -24,6 +24,9 @@
     },
     {
       "class": "Surfshark"
+    },
+    {
+      "class": "Gnome-calculator"
     }
   ],
   "skiptaskbarhidden": [],
