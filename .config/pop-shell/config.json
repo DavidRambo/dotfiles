@@ -27,6 +27,9 @@
     },
     {
       "class": "Gnome-calculator"
+    },
+    {
+      "class": "Io.elementary.appcenter"
     }
   ],
   "skiptaskbarhidden": [],

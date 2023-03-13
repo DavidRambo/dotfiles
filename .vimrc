@@ -65,15 +65,16 @@ call plug#begin('~/.vim/plugged')
   Plug 'fladson/vim-kitty'
 
 " Themes 
+  Plug 'catppuccin/vim', { 'as': 'catppuccin' }
   "Plug 'DavidRambo/vim-transparent' 
   Plug 'tribela/vim-transparent'
 " Plug 'altercation/vim-colors-solarized'
-  Plug 'ngscheurich/dromad-vim'
-  Plug 'joshdick/onedark.vim'
-  Plug 'postylem/vim-gruvbox8'
-  Plug 'morhetz/gruvbox'
-  Plug 'sainnhe/gruvbox-material'
-  Plug 'sonph/onehalf', { 'rtp': 'vim' }
+"  Plug 'ngscheurich/dromad-vim'
+"  Plug 'joshdick/onedark.vim'
+"  Plug 'postylem/vim-gruvbox8'
+"  Plug 'morhetz/gruvbox'
+"  Plug 'sainnhe/gruvbox-material'
+"  Plug 'sonph/onehalf', { 'rtp': 'vim' }
 " Plug 'romgrk/doom-one.vim'
 
 " Enable tweaks to colorschemes after runtimepath
@@ -133,9 +134,9 @@ if exists('+termguicolors')
    set termguicolors
 endif
 
-let g:doom_one_terminal_colors = v:true
+" let g:doom_one_terminal_colors = v:true
 
-colorscheme onedark
+colorscheme catppuccin_macchiato
 set background=dark
 
 let g:one_allow_italics=1
@@ -172,7 +173,7 @@ let g:one_allow_italics=1
 " Airline Config "
 "let g:airline_solarized_bg='dark'
 
-let g:airline_theme='onedark'
+let g:airline_theme='catppuccin_macchiato'
 " powerline symbols
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
