@@ -14,7 +14,7 @@ return {
 		"MesloLGSDZ Nerd Font",
 	}),
 	font_size = 14,
-	line_height = 1.25,
+	line_height = 1.0,
 	window_background_opacity = 1,
 	window_decorations = "RESIZE",
 
