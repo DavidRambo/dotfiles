@@ -30,6 +30,9 @@
     },
     {
       "class": "Io.elementary.appcenter"
+    },
+    {
+      "class": "gnome-extensions-app"
     }
   ],
   "skiptaskbarhidden": [],
