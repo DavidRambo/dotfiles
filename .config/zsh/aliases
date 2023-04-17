@@ -83,7 +83,7 @@ alias iperf="iperf3"
 # # # # # # # # # #
 # Kitty kittens
 # # # # # # # # # #
-alias kd="kitty +kitten diff"
+# alias kd="kitty +kitten diff"
 
 # VPN aliases
 alias kson="nordvpn set killswitch enable"
@@ -121,6 +121,17 @@ alias grep='grep --color=auto'
 alias d='dirs -v'
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
 
+
+# # # # #
+# NVIM #
+# # # # #
+alias lazyvim="NVIM_APPNAME=LazyVim nvim"
+# alias nvp="NVIM_APPNAME=packernvim nvim"
+
+# # # # # #
+# Distrobox
+# # # # # #
+alias dbu="distrobox enter ubuntu22"
 
 # # # # # # # # # #
 # TaskWarrior Aliases 
