@@ -10,6 +10,12 @@ alias la='lsd -laFh --color=auto'
 alias lsa='lsd -laFh --color=auto'
 alias l.='lsd -d .* --color=auto'
 
+alias tree="tree --gitignore"
+alias erd="erd -HI"
+alias erdl="erd -HI -L 1"
+alias el="erd -HI -L 1"
+alias ela="erd -HI -L 1 -."
+
 # Directory Shortcuts
 alias cdq="cd ~/repos/qmk_firmware/"
 alias cdd="cd ~/repos/dnr-hugo/"
@@ -34,12 +40,15 @@ alias se="sudoedit"
 alias bat="batcat"
 alias cat="batcat"
 alias ls="lsd"
-alias python="python3"
-alias pym="python -m"
 alias x="xplr"
 alias nv="nvim"
-
 alias df="df -h"
+
+# python
+alias python="python3"
+alias pym="python -m"
+alias vnv="python -m venv venv && source venv/bin/activate && pip instal -U pip"
+alias sv="source venv/bin/activate"
 
 alias fhere="find . -name "
 alias fpkg="dpkg --get-selections | grep "
