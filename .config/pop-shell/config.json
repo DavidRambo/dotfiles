@@ -33,6 +33,9 @@
     },
     {
       "class": "gnome-extensions-app"
+    },
+    {
+      "class": "extension-manager"
     }
   ],
   "skiptaskbarhidden": [],
