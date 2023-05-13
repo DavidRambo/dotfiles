@@ -6,12 +6,18 @@ end
 -- local ssh_domains = require("user.ssh")
 
 return {
+	warn_about_missing_glyphs = false,
 	color_scheme = "Catppuccin Macchiato",
 	-- font = wezterm.font("SFMono Nerd Font"),
 	font = wezterm.font_with_fallback({
-		{ family = "JetBrains Mono", weight = "Light", stretch = "ExtraCondensed" },
+		{
+			family = "JetBrains Mono",
+			weight = "Light",
+			-- stretch = "ExtraCondensed"
+		},
 		"SFMono Nerd Font",
 		"MesloLGSDZ Nerd Font",
+		"FreeMono",
 	}),
 	font_size = 14,
 	line_height = 1.0,
