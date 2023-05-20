@@ -20,7 +20,6 @@ eval "$(pyenv virtualenv-init -)"
 export REPO_DIR=/home/david/repos/cs61b
 
 # Set up the prompt
-
 autoload -Uz promptinit
 promptinit
 prompt adam1
@@ -36,10 +35,10 @@ zle_highlight=('paste:none')
 bindkey -v
 export KEYTIMEOUT=1
 
-# Keep 1000 lines of history within the shell
-# HISTFILE is XDG_STATE_HOME/zsh/history
-HISTSIZE=1000
-SAVEHIST=1000
+export HISTFILE="$ZDOTDIR/.zhistory"    # History filepath
+export HISTSIZE=10000                   # Maximum events for internal history
+export SAVEHIST=10000                   # Maximum events in history file
+setopt appendhistory
 
 # Use modern completion system
 zmodload zsh/complist # must be loaded before compinit
@@ -49,7 +48,8 @@ bindkey -M menuselect 'i' vi-forward-char
 bindkey -M menuselect 'e' vi-down-line-or-history
 
 autoload -Uz compinit
-compinit
+# compinit
+compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 
 # poetry completions are here:
 fpath+=$ZDOTDIR/.zfunc/
@@ -57,7 +57,8 @@ fpath+=$ZDOTDIR/.zfunc/
 # Hatch (Python project manager) completions
 . $ZDOTDIR/.hatch-complete.zsh
 
-compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
+# export PYTHONSTARTUP="~/.pyenv/versions/3.11.3/lib/python3.11/site-packages/.pythonstartup"
+export PYTHONSTARTUP="/home/david/.pythonstartup"
 
 _comp_options+=(globdots)  # completion with hidden files
 
@@ -157,3 +158,45 @@ bindkey '^[OF' end-of-line
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+
+# Created by `pipx` on 2023-05-17 18:58:29
+export PATH="$PATH:/home/david/.local/bin"
+
+# To ensure the shell emits an OSC 7 sequence
+# see: https://github.com/wez/wezterm/issues/207
+__vte_urlencode() (
+  # This is important to make sure string manipulation is handled
+  # byte-by-byte.
+  LC_ALL=C
+  str="$1"
+  while [ -n "$str" ]; do
+    safe="${str%%[!a-zA-Z0-9/:_\.\-\!\'\(\)~]*}"
+    printf "%s" "$safe"
+    str="${str#"$safe"}"
+    if [ -n "$str" ]; then
+      printf "%%%02X" "'$str"
+      str="${str#?}"
+    fi
+  done
+)
+
+__vte_osc7 () {
+  printf "\033]7;file://%s%s\007" "${HOSTNAME:-}" "$(__vte_urlencode "${PWD}")"
+}
+
+__vte_prompt_command() {
+  local command=$(HISTTIMEFORMAT= history 1 | sed 's/^ *[0-9]\+ *//')
+  command="${command//;/ }"
+  local pwd='~'
+  [ "$PWD" != "$HOME" ] && pwd=${PWD/#$HOME\//\~\/}
+  printf "\033]777;notify;Command completed;%s\007\033]0;%s@%s:%s\007%s" "${command}" "${USER}" "${HOSTNAME%%.*}" "${pwd}" "$(__vte_osc7)"
+}
+
+case "$TERM" in
+  xterm*|vte*)
+    [ -n "$BASH_VERSION" ] && PROMPT_COMMAND="__vte_prompt_command"
+    [ -n "$ZSH_VERSION"  ] && precmd_functions+=(__vte_osc7)
+    ;;
+esac
+
+true
