@@ -22,7 +22,8 @@ return {
 	font_size = 14,
 	line_height = 1.0,
 	window_background_opacity = 1,
-	window_decorations = "RESIZE",
+	-- window_decorations = "RESIZE",
+	window_decorations = "NONE",
 
 	underline_position = -2,
 	underline_thickness = 2,
