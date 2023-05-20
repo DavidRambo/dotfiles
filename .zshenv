@@ -5,10 +5,6 @@ export XDG_STATE_HOME="$HOME/.local/state"
 
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
-export HISTFILE="$ZDOTDIR/.zhistory"    # History filepath
-export HISTSIZE=10000                   # Maximum events for internal history
-export SAVEHIST=10000                   # Maximum events in history file
-
 export ATOM_HOME="$XDG_DATA_HOME/atom"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
@@ -26,3 +22,4 @@ export HISTFILE="$XDG_STATE_HOME/zsh/history"
 # NNN configuration
 #export NNN_TMPFILE='$XDG_CONFIG_HOME/nnn/.lastd'
 export NNN_BMS="d:$HOME/Downloads;q:$HOME/repos/qmk_firmware;c:$HOME/repos/code_projects;r:$Home/repos"
+. "/home/david/.config/local/share/cargo/env"
