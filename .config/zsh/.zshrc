@@ -90,6 +90,7 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 EDITOR="nvim"
+export SUDO_EDITOR="nvim"
 
 # Directory Stack
 #
