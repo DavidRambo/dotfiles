@@ -136,9 +136,6 @@ bindkey -M vicmd '^v' edit-command-line # Ctrl-v to enter vim
 
 # -------- #
 # Plugins
-# Syntax Highlighting
-# package installed via apt
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # # # # # # # # # #
@@ -201,3 +198,7 @@ case "$TERM" in
 esac
 
 true
+
+# Syntax Highlighting
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZDOTDIR/catppuccin_macchiato-zsh-syntax-highlighting.zsh
