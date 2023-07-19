@@ -48,7 +48,7 @@ alias df="df -h"
 # python
 alias python="python3"
 alias pym="python -m"
-alias vnv="python -m venv venv && source venv/bin/activate && pip install -U pip"
+alias vnv="python -m venv venv --prompt . && source venv/bin/activate && pip install -U pip &> /dev/null"
 alias sv="source venv/bin/activate"
 
 alias fhere="find . -name "
