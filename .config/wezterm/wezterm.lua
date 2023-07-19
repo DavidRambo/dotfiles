@@ -23,7 +23,7 @@ return {
 		"MesloLGSDZ Nerd Font",
 		"FreeMono",
 	}),
-	font_size = 14,
+	font_size = 13,
 	line_height = 1.0,
 	window_background_opacity = 1,
 	-- window_decorations = "RESIZE",
