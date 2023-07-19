@@ -7,6 +7,7 @@ fi
 
 # Paths
 # export PATH=~/.emacs.d/bin:$PATH
+export PATH=~/.local/neovim/bin:$PATH # installed from source, accessible in distrobox
 export PATH=~/.config/emacs/bin:$PATH
 export PATH=~/.config/local/share/cargo/bin:$PATH
 
@@ -58,7 +59,7 @@ fpath+=$ZDOTDIR/.zfunc/
 . $ZDOTDIR/.hatch-complete.zsh
 
 # export PYTHONSTARTUP="~/.pyenv/versions/3.11.3/lib/python3.11/site-packages/.pythonstartup"
-export PYTHONSTARTUP="/home/david/.pythonstartup"
+# export PYTHONSTARTUP="/home/david/.pythonstartup"
 
 _comp_options+=(globdots)  # completion with hidden files
 
