@@ -145,6 +145,9 @@ source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 source ~/.config/zsh/aliases
 
+# Set Anki to use Wayland
+export ANKI_WAYLAND=1
+
 # Key Bindings
 # ^ = CTRL
 # \e = ALT
@@ -203,3 +206,6 @@ true
 # Syntax Highlighting
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZDOTDIR/catppuccin_macchiato-zsh-syntax-highlighting.zsh
+
+# Configure zoxide for zsh
+eval "$(zoxide init zsh)"

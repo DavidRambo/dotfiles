@@ -1,16 +1,22 @@
 local wez_status, wezterm = pcall(require, "wezterm")
+local mux = wezterm.mux
 if not wez_status then
 	return {}
 end
 
 -- local ssh_domains = require("user.ssh")
 
+-- wezterm.on("gui-startup", function(cmd)
+-- 	local tab, pane, window = mux.spawn_window(cmd or {})
+-- 	window:gui_window():set_inner_size(100, 48)
+-- end)
+
 return {
-	-- enable_wayland = false,
+	enable_wayland = false,
 	window_close_confirmation = "NeverPrompt",
 	warn_about_missing_glyphs = false,
-	initial_cols = 88,
-	initial_rows = 44,
+	initial_cols = 100,
+	initial_rows = 48,
 	color_scheme = "Catppuccin Macchiato",
 	-- font = wezterm.font("SFMono Nerd Font"),
 	font = wezterm.font_with_fallback({
@@ -26,8 +32,8 @@ return {
 	font_size = 13,
 	line_height = 1.0,
 	window_background_opacity = 1,
-	-- window_decorations = "RESIZE",
-	window_decorations = "NONE",
+	window_decorations = "RESIZE",
+	-- window_decorations = "NONE",
 
 	underline_position = -2,
 	underline_thickness = 2,
