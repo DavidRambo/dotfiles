@@ -12,14 +12,14 @@ end
 -- end)
 
 return {
-	enable_wayland = false,
+	enable_wayland = true,
 	window_close_confirmation = "NeverPrompt",
 	warn_about_missing_glyphs = false,
 	initial_cols = 100,
 	initial_rows = 48,
 	color_scheme = "Catppuccin Macchiato",
-	-- font = wezterm.font("SFMono Nerd Font"),
 	font = wezterm.font_with_fallback({
+		"Iosevka",
 		{
 			family = "JetBrains Mono",
 			weight = "Light",
@@ -29,11 +29,21 @@ return {
 		"MesloLGSDZ Nerd Font",
 		"FreeMono",
 	}),
-	font_size = 13,
+	font_size = 14,
 	line_height = 1.0,
 	window_background_opacity = 1,
-	window_decorations = "RESIZE",
+	-- window_decorations = "RESIZE",
 	-- window_decorations = "NONE",
+	window_frame = {
+		border_left_width = "2",
+		border_right_width = "2",
+		border_bottom_height = "2",
+		border_top_height = "2",
+		border_left_color = "#363a4f", -- "surface0" in catppuccin macchiato
+		border_right_color = "#363a4f",
+		border_bottom_color = "#363a4f",
+		border_top_color = "#363a4f",
+	},
 
 	underline_position = -2,
 	underline_thickness = 2,
