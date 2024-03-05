@@ -145,9 +145,6 @@ source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 source ~/.config/zsh/aliases
 
-# Set Anki to use Wayland
-export ANKI_WAYLAND=1
-
 # Key Bindings
 # ^ = CTRL
 # \e = ALT
