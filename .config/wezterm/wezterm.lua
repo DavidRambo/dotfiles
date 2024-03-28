@@ -19,14 +19,14 @@ return {
 	initial_rows = 48,
 	color_scheme = "Catppuccin Macchiato",
 	font = wezterm.font_with_fallback({
-		"Iosevka",
+		"Iosevka Nerd Font",
+		"MesloLGLDZ Nerd Font",
 		{
 			family = "JetBrains Mono",
 			weight = "Light",
 			-- stretch = "ExtraCondensed"
 		},
 		"SFMono Nerd Font",
-		"MesloLGSDZ Nerd Font",
 		"FreeMono",
 	}),
 	font_size = 14,

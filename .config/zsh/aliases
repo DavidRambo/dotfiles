@@ -19,7 +19,6 @@ alias ela="erd -HI -L 1 -."
 # Directory Shortcuts
 alias cdq="cd ~/repos/qmk_firmware/"
 alias cdd="cd ~/repos/dnr-hugo/"
-#alias cdv="cd ~/vimwiki/"
 alias cde="cd $XDG_CONFIG_HOME/doom"
 alias cdn="cd ~/notes/"
 alias cdc="cd ~/repos/code_projects/"
@@ -28,11 +27,10 @@ alias cdw="cd $XDG_CONFIG_HOME/wezterm/"
 alias cddot="cd $HOME/repos/dotfiles/"
 
 # Config Edit
-alias vz="nvim ~/.config/zsh/.zshrc"
-alias vza="nvim ~/.config/zsh/aliases"
-alias vv="nvim ~/.vimrc"
 alias nvnv="nvim ~/.config/nvim/"
-alias vk="nvim ~/.config/kitty/kitty.conf"
+alias nvw="nvim ~/.config/wezterm/wezterm.lua"
+alias nvz="nvim ~/.config/zsh/.zshrc"
+alias nvza="nvim ~/.config/zsh/aliases"
 
 alias se="sudoedit"
 
@@ -54,29 +52,22 @@ alias sv="source venv/bin/activate"
 alias fhere="find . -name "
 alias fpkg="dpkg --get-selections | grep "
 
-alias wget="wget -c"
-
 # apt-get aliases
-alias update='sudo apt-get update && aptl'
-alias upgrade='sudo apt-get upgrade'
-alias aptu='sudo apt-get update && sudo apt-get upgrade -y'
-alias apts="apt-cache search"
-alias aptps="apt-cache pkgnames"
-alias aptshow="apt-cache showpkg"
-alias apti="sudo apt install"
-alias aptl="apt list --upgradable"
-alias list="apt list --upgradable"
+# alias update='sudo apt-get update && aptl'
+# alias upgrade='sudo apt-get upgrade'
+# alias aptu='sudo apt-get update && sudo apt-get upgrade -y'
+# alias apts="apt-cache search"
+# alias aptps="apt-cache pkgnames"
+# alias aptshow="apt-cache showpkg"
+# alias apti="sudo apt install"
+# alias aptl="apt list --upgradable"
+# alias list="apt list --upgradable"
 
 # flatpak
 alias flup="flatpak update"
 alias flupg="flatpak upgrade"
 
 alias open="xdg-open"
-
-# vimwiki aliases
-#alias vw="vim ~/vimwiki/index.md"
-#alias vb="vim ~/.bashrc"
-#alias vh="vim ~/vimwiki/hours-log.md"
 
 alias copydot="cp -a $ZDOTDIR ~/Dropbox\ \(Maestral\)/zsh ; cp -u ~/.vimrc ~/Dropbox\ \(Maestral\)/backup/.vimrc"
 
@@ -89,11 +80,6 @@ alias weather="curl wttr.in"
 alias def="cambrinary -w"
 
 alias iperf="iperf3"
-
-# # # # # # # # # #
-# Kitty kittens
-# # # # # # # # # #
-# alias kd="kitty +kitten diff"
 
 # VPN aliases
 alias kson="nordvpn set killswitch enable"
@@ -160,30 +146,30 @@ alias dbu="distrobox enter ubuntu22"
 # alias tui="taskwarrior-tui"
 
 # Function to add task $1 with tag $2
-tat () {
-	task add $1 tag:$2
-}
+# tat () {
+# 	task add $1 tag:$2
+# }
 
 # Function to add project to task
 # Use with two arguments: first is the task ID, second is the project name
-tmp () {
-	task $1 modify project:$2
-}
+# tmp () {
+# 	task $1 modify project:$2
+# }
 
 # Function shorthand for modifying a task
-tm () {
-	task $1 modify
-}
+# tm () {
+# 	task $1 modify
+# }
 
 # Function to add dependency
-tmd () {
-	task $1 modify depends:$2
-}
+# tmd () {
+# 	task $1 modify depends:$2
+# }
 # $1 is the top task ID, $2 is the included task ID upon which $1 depends
 
 # Function to add tags
-tmt () {
-	task $1 modify tag:$2
-}
+# tmt () {
+# 	task $1 modify tag:$2
+# }
 
 alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"

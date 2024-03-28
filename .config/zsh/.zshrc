@@ -17,9 +17,6 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-# For CS61B remote debugging
-export REPO_DIR=/home/david/repos/cs61b
-
 # Set up the prompt
 autoload -Uz promptinit
 promptinit
@@ -206,3 +203,6 @@ source $ZDOTDIR/catppuccin_macchiato-zsh-syntax-highlighting.zsh
 
 # Configure zoxide for zsh
 eval "$(zoxide init zsh)"
+
+# Set default journal file for hledger
+export LEDGER_FILE=~/finance/2024.journal
