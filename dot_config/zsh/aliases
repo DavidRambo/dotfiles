@@ -1,0 +1,175 @@
+#!/usr/bin/env bash
+
+# Aliases #
+# sourced by ~/.config/zsh/.zshrc
+
+#alias pwd="ptpwd"
+alias l='lsd -CFh --color=auto'
+alias ll='lsd -hlF --color=auto'
+alias la='lsd -laFh --color=auto'
+alias lsa='lsd -laFh --color=auto'
+alias l.='lsd -d .* --color=auto'
+
+alias tree="tree --gitignore"
+alias erd="erd -HI"
+alias erdl="erd -HI -L 1"
+alias el="erd -HI -L 1"
+alias ela="erd -HI -L 1 -."
+
+# Directory Shortcuts
+alias cdq="cd ~/repos/qmk_firmware/"
+alias cdd="cd ~/repos/dnr-hugo/"
+alias cde="cd $XDG_CONFIG_HOME/doom"
+alias cdn="cd ~/notes/"
+alias cdc="cd ~/repos/code_projects/"
+alias cdnv="cd $XDG_CONFIG_HOME/nvim/"
+alias cdw="cd $XDG_CONFIG_HOME/wezterm/"
+alias cddot="cd $HOME/repos/dotfiles/"
+
+# Config Edit
+alias nvnv="nvim ~/.config/nvim/"
+alias nvw="nvim ~/.config/wezterm/wezterm.lua"
+alias nvz="nvim ~/.config/zsh/.zshrc"
+alias nvza="nvim ~/.config/zsh/aliases"
+
+alias se="sudoedit"
+
+# binary aliases
+# alias bat="batcat"
+# alias cat="batcat"
+alias cat="bat"
+alias ls="lsd"
+alias x="xplr"
+alias nv="nvim"
+alias df="df -h"
+
+# python
+alias python="python3"
+alias pym="python -m"
+alias vnv="python -m venv venv --prompt . && source venv/bin/activate && pip install -U pip &> /dev/null"
+alias sv="source venv/bin/activate"
+
+alias fhere="find . -name "
+alias fpkg="dpkg --get-selections | grep "
+
+# apt-get aliases
+# alias update='sudo apt-get update && aptl'
+# alias upgrade='sudo apt-get upgrade'
+# alias aptu='sudo apt-get update && sudo apt-get upgrade -y'
+# alias apts="apt-cache search"
+# alias aptps="apt-cache pkgnames"
+# alias aptshow="apt-cache showpkg"
+# alias apti="sudo apt install"
+# alias aptl="apt list --upgradable"
+# alias list="apt list --upgradable"
+
+# flatpak
+alias flup="flatpak update"
+alias flupg="flatpak upgrade"
+
+alias open="xdg-open"
+
+alias copydot="cp -a $ZDOTDIR ~/Dropbox\ \(Maestral\)/zsh ; cp -u ~/.vimrc ~/Dropbox\ \(Maestral\)/backup/.vimrc"
+
+alias pomo="gnome-pomodoro --pause-resume"
+
+alias ws="watch -n 2 sensors"
+
+alias weather="curl wttr.in"
+
+alias def="cambrinary -w"
+
+alias iperf="iperf3"
+
+# VPN aliases
+alias kson="nordvpn set killswitch enable"
+alias ksoff="nordvpn set killswitch disable"
+alias vpn="nordvpn"
+
+alias wakeupcheck="grep 'enabled' /sys/bus/usb/devices/*/power/wakeup"
+alias usbdis="sudo python3 ~/repos/scripts/usb-wakeup-disabled.py"
+
+alias snas="kitty +kitten ssh rambo@192.168.50.237"
+alias sshnas="ssh rambo@192.168.50.237"
+# rambo@rambonas.rambolan
+
+# # # # # # # # # #
+# Git Aliases
+# # # # # # # # # #
+alias gits="git status -s"
+alias gitf="git fetch"
+alias fetch="git fetch"
+alias pull="git pull"
+alias gitm="git merge"
+alias gita="git add"
+alias gitcm="git commit -m"
+alias push="git push"
+alias gitc="git checkout"
+alias gitl="git log --pretty=format:'%h  %an, %ar: %s'"
+
+# Git for my dotfiles
+alias dots="git --git-dir=$HOME/repos/dotfiles/ --work-tree=$HOME"
+
+# Grep #
+alias grep='grep --color=auto'
+
+# Directory Stack #
+alias d='dirs -v'
+for index ({1..9}) alias "$index"="cd +${index}"; unset index
+
+
+# # # # #
+# NVIM #
+# # # # #
+alias lazyvim="NVIM_APPNAME=LazyVim nvim"
+# alias nvp="NVIM_APPNAME=packernvim nvim"
+
+# # # # # #
+# Distrobox
+# # # # # #
+alias dbu="distrobox enter ubuntu22"
+
+# # # # # # # # # #
+# TaskWarrior Aliases 
+# and Functions
+# # # # # # # # # #
+# alias vt="vim $XDG_CONFIG_HOME/task/taskrc"
+# alias ts="task sync"
+# alias tl="task list"
+# alias tlr="task list +reading"
+# alias tlh="task list +home"
+# alias tlj="task list +jobs"
+# alias ta="task add"
+# alias tah="task add tag:home"
+# alias taj="task add tag:jobs"
+# alias te="task edit"
+# alias tui="taskwarrior-tui"
+
+# Function to add task $1 with tag $2
+# tat () {
+# 	task add $1 tag:$2
+# }
+
+# Function to add project to task
+# Use with two arguments: first is the task ID, second is the project name
+# tmp () {
+# 	task $1 modify project:$2
+# }
+
+# Function shorthand for modifying a task
+# tm () {
+# 	task $1 modify
+# }
+
+# Function to add dependency
+# tmd () {
+# 	task $1 modify depends:$2
+# }
+# $1 is the top task ID, $2 is the included task ID upon which $1 depends
+
+# Function to add tags
+# tmt () {
+# 	task $1 modify tag:$2
+# }
+
+alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
