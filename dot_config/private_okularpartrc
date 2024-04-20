@@ -1,0 +1,15 @@
+[Core Performance]
+MemoryLevel=Aggressive
+
+[General]
+ttsVoice=English (America, New York City)+grandma
+
+[Main View]
+ShowBottomBar=true
+
+[PageView]
+MouseMode=TextSelect
+PrimaryAnnotationToolBar=QuickAnnotationToolBar
+
+[Reviews]
+QuickAnnotationTools=<tool name="Teal Highlighter" type="highlight" id="1"><engine type="TextSelector" color="#ff8bd5ca"><annotation opacity="0.8" type="Highlight" color="#ff8bd5ca"/></engine><shortcut>1</shortcut></tool>,<tool name="Green Highlighter" type="highlight" id="2"><engine type="TextSelector" color="#ffa6da95"><annotation opacity="0.8" type="Highlight" color="#ffa6da95"/></engine><shortcut>2</shortcut></tool>,<tool name="Purple Highlighter" type="highlight" id="3"><engine type="TextSelector" color="#ffc6a0f6"><annotation opacity="0.8" type="Highlight" color="#ffc6a0f6"/></engine><shortcut>3</shortcut></tool>,<tool name="Yellow Highlighter" type="highlight" id="4"><engine type="TextSelector" color="#ffeed49f"><annotation opacity="0.8" type="Highlight" color="#ffeed49f"/></engine><shortcut>4</shortcut></tool>,<tool type="underline" id="5"><engine type="TextSelector" color="#ffc49ef4"><annotation type="Underline" color="#ffc49ef4"/></engine><shortcut>5</shortcut></tool>,<tool name="Insert Text" type="typewriter" id="6" default="true"><engine block="true" type="PickPoint"><annotation type="Typewriter" width="0" textColor="#000000" color="#00ffffff"/></engine><shortcut>6</shortcut></tool>,<tool type="note-inline" id="7"><engine block="true" type="PickPoint" hoverIcon="tool-note-inline" color="#ffeed49f"><annotation type="FreeText" width="1" color="#ffeed49f"/></engine><shortcut>7</shortcut></tool>,<tool type="note-linked" id="8"><engine type="PickPoint" hoverIcon="tool-note" color="#ffeed49f"><annotation type="Text" icon="Note" color="#ffeed49f"/></engine><shortcut>8</shortcut></tool>

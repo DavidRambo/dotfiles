@@ -1,0 +1,30 @@
+import = ["/home/david/.config/alacritty/catppuccin/catppuccin-macchiato.toml"]
+
+[font]
+size = 13.0
+
+# [font.cursor]
+# cursor = "CellForeground"
+# text = "CellBackground"
+
+[font.normal]
+family = "IosevkaTerm Nerd Font"
+# family = "JetBrainsMonoNerdFont"
+
+[[keyboard.bindings]]
+action = "CreateNewWindow"
+key = "N"
+mods = "Control|Shift"
+
+[window]
+decorations = "full"
+decorations_theme_variant = "Dark"
+dynamic_title = true
+
+[window.dimensions]
+columns = 110
+lines = 54
+
+[window.padding]
+x = 4
+y = 4

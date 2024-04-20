@@ -1,0 +1,4 @@
+IndentCaseLabels: true
+IndentWidth: 2
+
+AllowShortFunctionsOnASingleLine: None
