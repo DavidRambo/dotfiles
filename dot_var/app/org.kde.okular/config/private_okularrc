@@ -1,0 +1,40 @@
+3440x1440 screen: Height=1368
+3440x1440 screen: Width=1194
+State=AAAA/wAAAAD9AAAAAQAAAAAAAAG9AAAFQPwCAAAAAfsAAAAcAG8AawB1AGwAYQByAF8AcwBpAGQAZQBiAGEAcgAAAAAYAAAFQAAAAPcA///+AAAEmQAABUAAAAAEAAAABAAAAAgAAAAI/AAAAAMAAAABAAAAAQAAACwAcQB1AGkAYwBrAEEAbgBuAG8AdABhAHQAaQBvAG4AVABvAG8AbABCAGEAcgMAAAAA/////wAAAAAAAAAAAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAAAAAAAgAAAAEAAAAiAGEAbgBuAG8AdABhAHQAaQBvAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+
+[Desktop Entry]
+FullScreen=false
+
+[General]
+LockSidebar=true
+ShowSidebar=true
+
+[MainWindow]
+3440x1440 screen: Height=1368
+3440x1440 screen: Width=1196
+3440x1440 screen: XPosition=1126
+3440x1440 screen: YPosition=37
+DP-2=DP-2
+ToolBarsMovable=Disabled
+
+[Recent Files]
+File1[$e]=$HOME/Downloads/details.pdf
+File10[$e]=$HOME/Dropbox (Maestral)/programming/Linux-Command-Line.pdf
+File2[$e]=$HOME/Downloads/February 2024.pdf
+File3[$e]=$HOME/Downloads/March 2024.pdf
+File4[$e]=$HOME/Dropbox (Maestral)/programming/OSU/CS271/IA32-sdm-vol-1.pdf
+File5[$e]=$HOME/Dropbox (Maestral)/programming/OSU/CS271/CS271 Irvine Procedure Reference.pdf
+File6[$e]=$HOME/Dropbox (Maestral)/programming/Effective C.pdf
+File7[$e]=$HOME/Dropbox (Maestral)/programming/C Programming A Modern Approach.pdf
+File8[$e]=$HOME/Dropbox (Maestral)/programming/pytest-second-edition.pdf
+File9[$e]=$HOME/Dropbox (Maestral)/programming/OSU/CS271/CS271 Instructions Reference.pdf
+Name1[$e]=details.pdf
+Name10[$e]=Linux-Command-Line.pdf
+Name2[$e]=February 2024.pdf
+Name3[$e]=March 2024.pdf
+Name4[$e]=IA32-sdm-vol-1.pdf
+Name5[$e]=CS271 Irvine Procedure Reference.pdf
+Name6[$e]=Effective C.pdf
+Name7[$e]=C Programming A Modern Approach.pdf
+Name8[$e]=pytest-second-edition.pdf
+Name9[$e]=CS271 Instructions Reference.pdf
