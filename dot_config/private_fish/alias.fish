@@ -19,6 +19,7 @@ alias ela="erd -HI -L 1 -."
 alias flup="flatpak update"
 alias flupg="flatpak upgrade"
 
+# Git
 abbr --add gita 'git add'
 abbr --add gitcm 'git commit -m'
 abbr --add gch 'git checkout'
@@ -37,6 +38,9 @@ abbr --add G --position anywhere --set-cursor " | grep '%'"
 # Hledger
 abbr --add hla "hledger add"
 abbr --add ht "hledger -f $HOME/notes/time_ledger.timedot bal"
+
+# justfile
+abbr --add nvj "nvim ~/justfile"
 
 # ls -> lsd
 alias ls='lsd -Fh --color=auto'
