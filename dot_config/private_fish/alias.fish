@@ -9,6 +9,10 @@ alias cdn="cd ~/notes/"
 alias cdc="cd ~/repos/code_projects/"
 alias cdnv="cd $XDG_CONFIG_HOME/nvim/"
 alias cdw="cd $XDG_CONFIG_HOME/wezterm/"
+alias cch="cd $XDG_CONFIG_HOME/local/share/chezmoi"
+
+abbr --add dx distrobox
+abbr --add dxe "distrobox enter"
 
 alias erd="erd -HI"
 alias erdl="erd -HI -L 1"
@@ -20,14 +24,16 @@ alias flup="flatpak update"
 alias flupg="flatpak upgrade"
 
 # Git
+abbr --add ga --position command 'git add'
 abbr --add gita 'git add'
-abbr --add gitcm 'git commit -m'
 abbr --add gch 'git checkout'
-abbr --add gl 'git log'
-abbr --add gr 'git rebase'
+abbr --add gitcm --position command --set-cursor 'git commit -m "%"'
+abbr --add gcm --position command --set-cursor 'git commit -m "%"'
+abbr --add --position command gl 'git log'
+abbr --add --position command gr 'git rebase'
 abbr --add grm 'git rebase main'
 abbr --add gits 'git status'
-abbr --add gs 'git status'
+abbr --add --position command gs 'git status'
 
 # Git for my dotfiles
 alias dots="git --git-dir=$HOME/repos/dotfiles/ --work-tree=$HOME"
