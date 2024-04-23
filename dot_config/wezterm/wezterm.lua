@@ -4,6 +4,8 @@ if not wez_status then
 	return {}
 end
 
+local act = wezterm.action
+
 -- local ssh_domains = require("user.ssh")
 
 -- wezterm.on("gui-startup", function(cmd)
@@ -66,5 +68,22 @@ return {
 	},
 	colors = {
 		visual_bell = "#202020",
+	},
+
+	inactive_pane_hsb = {
+		saturation = 0.80,
+		brightness = 0.85,
+	},
+
+	keys = {
+		-- Pane keymaps
+		{ key = "s", mods = "ALT", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+		{ key = "v", mods = "ALT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+		{ key = "n", mods = "ALT", action = act.ActivatePaneDirection("Left") },
+		{ key = "i", mods = "ALT", action = act.ActivatePaneDirection("Right") },
+		{ key = "u", mods = "ALT", action = act.ActivatePaneDirection("Up") },
+		{ key = "e", mods = "ALT", action = act.ActivatePaneDirection("Down") },
+
+		{ key = "r", mods = "ALT", action = act.RotatePanes("Clockwise") },
 	},
 }
