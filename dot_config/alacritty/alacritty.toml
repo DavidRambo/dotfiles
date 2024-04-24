@@ -1,7 +1,7 @@
 import = ["/home/david/.config/alacritty/catppuccin/catppuccin-macchiato.toml"]
 
 [font]
-size = 13.0
+size = 14.0
 
 # [font.cursor]
 # cursor = "CellForeground"
@@ -22,8 +22,8 @@ decorations_theme_variant = "Dark"
 dynamic_title = true
 
 [window.dimensions]
-columns = 110
-lines = 54
+columns = 100
+lines = 48
 
 [window.padding]
 x = 4
