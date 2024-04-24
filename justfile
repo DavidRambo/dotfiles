@@ -10,6 +10,8 @@ repos-dir:
     fi
 
 build-neovim: repos-dir
+    #!/usr/bin/env bash
+    echo -e "Running ~/repos/scripts/setup/neovim-nightly.sh"
     ~/repos/scripts/setup/neovim-nightly.sh
 
 install-doom: repos-dir
