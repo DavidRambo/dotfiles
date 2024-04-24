@@ -10,7 +10,7 @@ repos-dir:
     fi
 
 build-neovim: repos-dir
-    ~/.config/local/share/chezmoi/neovim-nightly.sh
+    ~/repos/scripts/setup/neovim-nightly.sh
 
 install-doom: repos-dir
     #!/usr/bin/env bash
