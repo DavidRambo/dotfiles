@@ -15,6 +15,34 @@ local act = wezterm.action
 
 return {
 	default_prog = { "/usr/bin/fish", "-l" },
+	launch_menu = {
+		{
+			label = "Host Shell",
+			args = { "sh", "-c", "exec /usr/bin/fish -l" },
+		},
+		{
+			label = "Fedora Box",
+			args = {
+				"distrobox",
+				"enter",
+				"fedora",
+				"--",
+				"/usr/bin/fish",
+				"-l",
+			},
+		},
+		{
+			label = "Bazzite Arch",
+			args = {
+				"distrobox",
+				"enter",
+				"bazzite-arch",
+				"--",
+				"/usr/bin/fish",
+				"-l",
+			},
+		},
+	},
 	enable_wayland = true,
 	window_close_confirmation = "NeverPrompt",
 	warn_about_missing_glyphs = false,
