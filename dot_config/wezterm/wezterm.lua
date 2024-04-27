@@ -50,6 +50,10 @@ return {
 	initial_rows = 48,
 	color_scheme = "Catppuccin Macchiato",
 	font = wezterm.font_with_fallback({
+		{
+			family = "MapleMono NF",
+			weight = "Regular",
+		},
 		"IosevkaTerm Nerd Font",
 		"MesloLGLDZ Nerd Font",
 		{
@@ -60,7 +64,7 @@ return {
 		"SFMono Nerd Font",
 		"FreeMono",
 	}),
-	font_size = 14,
+	font_size = 13,
 	line_height = 1.0,
 	window_background_opacity = 1,
 	-- window_decorations = "RESIZE",
