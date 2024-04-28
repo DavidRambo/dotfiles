@@ -11,8 +11,19 @@ repos-dir:
 
 build-neovim: repos-dir
     #!/usr/bin/env bash
-    echo -e "Running ~/repos/scripts/setup/neovim-nightly.sh"
-    ~/repos/scripts/setup/neovim-nightly.sh
+    if [ ! -d ~/repos/scripts ];
+    then
+      echo -e "[ERROR] The scripts directory does not exist."
+      echo -e "Cloning..."
+      git clone git@github.com:DavidRambo/scripts.git
+    fi
+    if [ ! -d ~/repos/scripts ];
+    then
+      echo -e "[ERROR] The scripts repo is still not in place. Aborting."
+    else
+      echo -e "Running ~/repos/scripts/setup/neovim-nightly.sh"
+      ~/repos/scripts/setup/neovim-nightly.sh
+    fi
 
 install-doom: repos-dir
     #!/usr/bin/env bash
