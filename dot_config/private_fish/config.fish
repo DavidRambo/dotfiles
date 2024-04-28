@@ -5,8 +5,8 @@ end
 set -U fish_greeting ""
 
 set XDG_CONFIG_HOME $HOME/.config/
-set XDG_DATA_HOME $XDG_CONFIG_HOME/local/share
-set XDG_CACHE_HOME $XDG_CONFIG_HOME/cache
+set XDG_DATA_HOME $HOME/.local/share
+set XDG_CACHE_HOME $HOME/.cache
 set XDG_STATE_HOME $HOME/.local/state
 
 set CARGO_HOME $XDG_DATA_HOME/cargo
@@ -19,6 +19,6 @@ set -gx LEDGER_FILE $HOME/finance/2024.journal
 
 source ~/.config/fish/alias.fish
 
-pyenv init - | source
+# pyenv init - | source
 
 zoxide init fish | source
