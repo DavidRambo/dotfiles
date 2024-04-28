@@ -9,11 +9,11 @@ fi
 export PATH=~/.local/neovim/bin:$PATH # installed from source, accessible in distrobox
 export PATH=~/.config/emacs/bin:$PATH
 
-export GIO_MODULE_DIR=/usr/lib/x86_64-linux-gnu/gio/modules/
-export PYENV_ROOT="$HOME/.pyenv/"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# export GIO_MODULE_DIR=/usr/lib/x86_64-linux-gnu/gio/modules/
+# export PYENV_ROOT="$HOME/.pyenv/"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
 
 # Set up the prompt
 autoload -Uz promptinit
@@ -51,7 +51,7 @@ compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 fpath+=$ZDOTDIR/.zfunc/
 
 # Hatch (Python project manager) completions
-. $ZDOTDIR/.hatch-complete.zsh
+# . $ZDOTDIR/.hatch-complete.zsh
 
 _comp_options+=(globdots)  # completion with hidden files
 
