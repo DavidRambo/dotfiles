@@ -66,4 +66,6 @@ alias nvw="nvim ~/.config/wezterm/wezterm.lua"
 alias nvz="nvim ~/.config/zsh/.zshrc"
 alias nvza="nvim ~/.config/zsh/aliases"
 
+alias sshnas="ssh rambo@192.168.50.237"
+
 alias tree="tree --gitignore"
