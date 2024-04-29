@@ -13,6 +13,7 @@ alias cch="cd $XDG_CONFIG_HOME/local/share/chezmoi"
 
 abbr --add dx distrobox
 abbr --add dxe "distrobox enter"
+abbr --add dxh distrobox-host-exec
 
 alias erd="erd -HI"
 alias erdl="erd -HI -L 1"
