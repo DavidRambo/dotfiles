@@ -19,6 +19,4 @@ set -gx LEDGER_FILE $HOME/finance/2024.journal
 
 source ~/.config/fish/alias.fish
 
-# pyenv init - | source
-
 zoxide init fish | source
