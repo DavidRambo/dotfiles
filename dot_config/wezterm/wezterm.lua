@@ -14,11 +14,20 @@ local act = wezterm.action
 -- end)
 
 return {
-	default_prog = { "/usr/bin/fish", "-l" },
+	default_prog = {
+		"distrobox",
+		"enter",
+		"fedora",
+		"--",
+		"/usr/bin/fish",
+		"-l",
+	},
 	launch_menu = {
 		{
+			-- This isn't working.
 			label = "Host Shell",
-			args = { "sh", "-c", "exec /usr/bin/fish -l" },
+			-- args = { "sh", "-c", "exec /usr/bin/fish -l" },
+			args = { "sh", "-c", "distrobox-host-exec" },
 		},
 		{
 			label = "Fedora Box",
@@ -37,6 +46,17 @@ return {
 				"distrobox",
 				"enter",
 				"bazzite-arch",
+				"--",
+				"/usr/bin/fish",
+				"-l",
+			},
+		},
+		{
+			label = "Bluefin",
+			args = {
+				"distrobox",
+				"enter",
+				"bluefin",
 				"--",
 				"/usr/bin/fish",
 				"-l",
@@ -109,8 +129,8 @@ return {
 
 	keys = {
 		-- Pane keymaps
-		{ key = "s", mods = "ALT", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
-		{ key = "v", mods = "ALT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+		{ key = "s", mods = "ALT|SHIFT", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+		{ key = "v", mods = "ALT|SHIFT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
 		{ key = "n", mods = "ALT", action = act.ActivatePaneDirection("Left") },
 		{ key = "i", mods = "ALT", action = act.ActivatePaneDirection("Right") },
 		{ key = "u", mods = "ALT", action = act.ActivatePaneDirection("Up") },
