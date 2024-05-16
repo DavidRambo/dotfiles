@@ -1,5 +1,12 @@
 abbr --add cat bat
 
+# cd -> zoxide
+abbr --erase cd &>/dev/null
+alias cd=__zoxide_z
+
+abbr --erase cdi &>/dev/null
+alias cdi=__zoxide_zi
+
 # Directory Shortcuts
 alias cdq="cd ~/repos/qmk_firmware/"
 alias cdd="cd ~/repos/dnr-hugo/"
@@ -66,6 +73,10 @@ alias nvnv="nvim ~/.config/nvim/init.lua"
 alias nvw="nvim ~/.config/wezterm/wezterm.lua"
 alias nvz="nvim ~/.config/zsh/.zshrc"
 alias nvza="nvim ~/.config/zsh/aliases"
+
+# Python
+abbr --add uvv "uv venv venv" # Create new virtual environment in ./venv/
+abbr --add sv "source venv/bin/activate.fish"
 
 alias sshnas="ssh rambo@192.168.50.237"
 

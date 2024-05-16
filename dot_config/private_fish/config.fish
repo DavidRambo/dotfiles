@@ -17,6 +17,6 @@ set -g fish_key_bindings fish_vi_key_bindings
 
 set -gx LEDGER_FILE $HOME/finance/2024.journal
 
-source ~/.config/fish/alias.fish
-
 zoxide init fish | source
+
+source ~/.config/fish/alias.fish
