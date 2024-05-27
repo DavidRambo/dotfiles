@@ -71,16 +71,15 @@ return {
 	color_scheme = "Catppuccin Macchiato",
 	font = wezterm.font_with_fallback({
 		{
-			family = "MapleMono NF",
-			weight = "Regular",
-		},
-		"IosevkaTerm Nerd Font",
-		"MesloLGLDZ Nerd Font",
-		{
 			family = "JetBrains Mono",
 			weight = "Light",
 			-- stretch = "ExtraCondensed"
 		},
+		{
+			family = "MapleMono NF",
+			weight = "Regular",
+		},
+		"IosevkaTerm Nerd Font",
 		"SFMono Nerd Font",
 		"FreeMono",
 	}),
@@ -123,8 +122,8 @@ return {
 	},
 
 	inactive_pane_hsb = {
-		saturation = 0.80,
-		brightness = 0.85,
+		saturation = 0.95,
+		brightness = 0.90,
 	},
 
 	keys = {
