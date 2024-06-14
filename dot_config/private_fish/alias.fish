@@ -22,6 +22,8 @@ abbr --add dx distrobox
 abbr --add dxe "distrobox enter"
 abbr --add dxh distrobox-host-exec
 
+abbr --add df dysk
+
 alias erd="erd -HI"
 alias erdl="erd -HI -L 1"
 alias el="erd -HI -L 1"
@@ -81,3 +83,5 @@ abbr --add sv "source venv/bin/activate.fish"
 alias sshnas="ssh rambo@192.168.50.237"
 
 alias tree="tree --gitignore"
+
+abbr --add zel zellij
