@@ -9,6 +9,9 @@ repos-dir:
         mkdir ~/repos
     fi
 
+lazy:
+    nvim --headless "+Lazy! sync" +qa
+
 build-neovim: repos-dir
     #!/usr/bin/env bash
     if [ ! -d ~/repos/scripts ];
