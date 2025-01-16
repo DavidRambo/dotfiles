@@ -65,8 +65,9 @@ alias la='lsd -laFh --color=auto'
 alias lsa='lsd -laFh --color=auto'
 alias l.='lsd -d .* --color=auto'
 
-alias nv '~/.local/neovim/bin/nvim'
-alias nvim '~/.local/neovim/bin/nvim'
+alias nv nvim
+# alias nv '~/.local/neovim/bin/nvim'
+# alias nvim '~/.local/neovim/bin/nvim'
 
 # Config Edit
 alias nvf="nvim ~/.config/fish/config.fish"
@@ -76,9 +77,13 @@ alias nvw="nvim ~/.config/wezterm/wezterm.lua"
 alias nvz="nvim ~/.config/zsh/.zshrc"
 alias nvza="nvim ~/.config/zsh/aliases"
 
+abbr --add pn pnpm
+
 # Python
-abbr --add uvv "uv venv venv" # Create new virtual environment in ./venv/
-abbr --add sv "source venv/bin/activate.fish"
+abbr --add uvv "uv venv"
+abbr --add sv "source .venv/bin/activate.fish"
+
+alias raku="~/Downloads/rakudo-moar-2024.09-01-linux-x86_64-gcc/bin/raku"
 
 alias sshnas="ssh rambo@192.168.50.237"
 
