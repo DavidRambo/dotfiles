@@ -72,7 +72,7 @@ return {
 	font = wezterm.font_with_fallback({
 		{
 			family = "JetBrains Mono",
-			weight = "Light",
+			weight = "Regular",
 			-- stretch = "ExtraCondensed"
 		},
 		{
