@@ -58,6 +58,8 @@ abbr --add ht "hledger -f $HOME/notes/time_ledger.timedot bal"
 # justfile
 abbr --add jnv "nvim ~/justfile"
 
+abbr --add lg lazygit
+
 # ls -> lsd
 alias ls='lsd -Fh --color=auto'
 alias ll='lsd -hlF --color=auto'
