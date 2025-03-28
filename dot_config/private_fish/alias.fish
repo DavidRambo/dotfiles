@@ -56,7 +56,7 @@ abbr --add hla "hledger add"
 abbr --add ht "hledger -f $HOME/notes/time_ledger.timedot bal"
 
 # justfile
-abbr --add nvj "nvim ~/justfile"
+abbr --add jnv "nvim ~/justfile"
 
 # ls -> lsd
 alias ls='lsd -Fh --color=auto'
