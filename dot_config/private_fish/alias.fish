@@ -92,3 +92,5 @@ alias sshnas="ssh rambo@192.168.50.237"
 alias tree="tree --gitignore"
 
 abbr --add zel zellij
+
+alias zola="flatpak run org.getzola.zola"
