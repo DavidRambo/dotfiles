@@ -14,55 +14,6 @@ local act = wezterm.action
 -- end)
 
 return {
-	default_prog = {
-		"distrobox",
-		"enter",
-		"fedora",
-		"--",
-		"/usr/bin/fish",
-		"-l",
-	},
-	launch_menu = {
-		{
-			-- This isn't working.
-			label = "Host Shell",
-			-- args = { "sh", "-c", "exec /usr/bin/fish -l" },
-			args = { "sh", "-c", "distrobox-host-exec" },
-		},
-		{
-			label = "Fedora Box",
-			args = {
-				"distrobox",
-				"enter",
-				"fedora",
-				"--",
-				"/usr/bin/fish",
-				"-l",
-			},
-		},
-		{
-			label = "Bazzite Arch",
-			args = {
-				"distrobox",
-				"enter",
-				"bazzite-arch",
-				"--",
-				"/usr/bin/fish",
-				"-l",
-			},
-		},
-		{
-			label = "Bluefin",
-			args = {
-				"distrobox",
-				"enter",
-				"bluefin",
-				"--",
-				"/usr/bin/fish",
-				"-l",
-			},
-		},
-	},
 	enable_wayland = true,
 	window_close_confirmation = "NeverPrompt",
 	warn_about_missing_glyphs = false,
@@ -126,15 +77,66 @@ return {
 		brightness = 0.90,
 	},
 
-	keys = {
-		-- Pane keymaps
-		{ key = "s", mods = "ALT|SHIFT", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
-		{ key = "v", mods = "ALT|SHIFT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-		{ key = "n", mods = "ALT", action = act.ActivatePaneDirection("Left") },
-		{ key = "i", mods = "ALT", action = act.ActivatePaneDirection("Right") },
-		{ key = "u", mods = "ALT", action = act.ActivatePaneDirection("Up") },
-		{ key = "e", mods = "ALT", action = act.ActivatePaneDirection("Down") },
-
-		{ key = "r", mods = "ALT", action = act.RotatePanes("Clockwise") },
+	default_prog = {
+		"distrobox",
+		"enter",
+		"fedora",
+		"--",
+		"/usr/bin/fish",
+		"-l",
 	},
+
+	launch_menu = {
+		{
+			-- This isn't working.
+			label = "Host Shell",
+			-- args = { "sh", "-c", "exec /usr/bin/fish -l" },
+			args = { "sh", "-c", "distrobox-host-exec" },
+		},
+		{
+			label = "Fedora Box",
+			args = {
+				"distrobox",
+				"enter",
+				"fedora",
+				"--",
+				"/usr/bin/fish",
+				"-l",
+			},
+		},
+		{
+			label = "Bazzite Arch",
+			args = {
+				"distrobox",
+				"enter",
+				"bazzite-arch",
+				"--",
+				"/usr/bin/fish",
+				"-l",
+			},
+		},
+		{
+			label = "Bluefin",
+			args = {
+				"distrobox",
+				"enter",
+				"bluefin",
+				"--",
+				"/usr/bin/fish",
+				"-l",
+			},
+		},
+	},
+
+	-- keys = {
+	-- 	-- Pane keymaps
+	-- 	{ key = "s", mods = "ALT|SHIFT", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+	-- 	{ key = "v", mods = "ALT|SHIFT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+	-- 	{ key = "n", mods = "ALT", action = act.ActivatePaneDirection("Left") },
+	-- 	{ key = "i", mods = "ALT", action = act.ActivatePaneDirection("Right") },
+	-- 	{ key = "u", mods = "ALT", action = act.ActivatePaneDirection("Up") },
+	-- 	{ key = "e", mods = "ALT", action = act.ActivatePaneDirection("Down") },
+
+	-- 	{ key = "r", mods = "ALT", action = act.RotatePanes("Clockwise") },
+	-- },
 }
