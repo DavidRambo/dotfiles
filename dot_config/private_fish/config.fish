@@ -9,6 +9,8 @@ set XDG_DATA_HOME $HOME/.local/share
 set XDG_CACHE_HOME $HOME/.cache
 set XDG_STATE_HOME $HOME/.local/state
 
+source ~/.config/fish/functions/fish_prompt.fish
+
 set CARGO_HOME $XDG_DATA_HOME/cargo
 
 set EDITOR /usr/bin/nvim
