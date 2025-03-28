@@ -67,7 +67,7 @@ return {
 	window_close_confirmation = "NeverPrompt",
 	warn_about_missing_glyphs = false,
 	initial_cols = 100,
-	initial_rows = 48,
+	initial_rows = 50,
 	color_scheme = "Catppuccin Macchiato",
 	font = wezterm.font_with_fallback({
 		{
