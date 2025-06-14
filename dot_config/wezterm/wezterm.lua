@@ -30,7 +30,6 @@ return {
 			family = "MapleMono NF",
 			weight = "Regular",
 		},
-		"IosevkaTerm Nerd Font",
 		"SFMono Nerd Font",
 		"FreeMono",
 	}),
